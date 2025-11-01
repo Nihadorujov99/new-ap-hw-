@@ -18,6 +18,8 @@ public static class ApplicationLayerRegistration
  
         // Register specific services
         services.AddScoped<IStudentService, StudentManager>();
+        services.AddScoped<IGroupService, GroupManager>();
+        services.AddScoped<ITeacherService, TeacherManager>();
         services.AddScoped<IAuthService, AuthManager>();
         services.AddScoped<IImageService, ImageManager>();
 

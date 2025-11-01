@@ -22,6 +22,8 @@ public static class InfrastructureLayerRegistration
 
         services.AddScoped(typeof(IRepositoryAsync<>), typeof(EfCoreRepositoryAsync<>));
         services.AddScoped<IStudentRepository, StudentRepository>();
+        services.AddScoped<IGroupRepository, GroupRepository>();
+        services.AddScoped<ITeacherRepository, TeacherRepository>();
 
         services.AddIdentityCore<AppUser>(x =>
         {
